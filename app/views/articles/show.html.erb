@@ -1,2 +1,10 @@
-<p><%= @article.title %></p>
-<p><%= button_to("Like", article_like_path(@article)) %></p>
+<h3><%= @article.title %></h3>
+<span>Description: <%= @article.description %></span>
+<p></p>
+<span>Status: <%= @article.status %></span>
+<h4><%= link_to image_tag @article.image %></h4>
+<div class="like-container">
+  <span class="likes-count">Likes: <%= @article.likes.count %></span>
+  <span><%= button_to("Like", article_like_path(@article)) %></span>
+</div>
+

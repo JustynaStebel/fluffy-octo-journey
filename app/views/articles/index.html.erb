@@ -1,8 +1,9 @@
-<div>
+<div class="articles-list">
+  <h2>Listings near you:</h2>
   <% @articles.each do |article| %>
-    <h3>Listings near you:</h3>
-    <h5><%= article.title %></h5>
-    <h6>Likes:<%= article.likes.count %></h6>
-    <p><%= link_to("Show details", article_path(article)) %></p>
+    <div class="article-container">
+      <h3><%= article.title %></h3>
+      <span><%= link_to("Show details", article_path(article)) %></span>
+    </div>
   <% end %>
 </div>
