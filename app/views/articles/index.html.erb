@@ -1,0 +1,8 @@
+<div>
+  <% @articles.each do |article| %>
+    <h3>Listings near you:</h3>
+    <h5><%= article.title %></h5>
+    <h6>Likes:<%= article.likes.count %></h6>
+    <p><%= link_to("Show details", article_path(article)) %></p>
+  <% end %>
+</div>
